@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>HotelController</servlet-name>
+        <servlet-class>tn.hotelmanagement.hotelmanagementjee.HotelController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HotelController</servlet-name>
+        <url-pattern>/hotels</url-pattern>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminController</servlet-name>
+        <servlet-class>tn.hotelmanagement.controller.AdminController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/admin/create</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminDashboardController</servlet-name>
+        <servlet-class>tn.hotelmanagement.controller.AdminDashboardController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminDashboardController</servlet-name>
+        <url-pattern>/admin/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>tn.hotelmanagement.controller.LoginController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AgentDashboardController</servlet-name>
+        <servlet-class>tn.hotelmanagement.controller.AgentDashboardController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AgentDashboardController</servlet-name>
+        <url-pattern>/agent/dashboard</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HotelCreateController</servlet-name>
+        <servlet-class>tn.hotelmanagement.controller.HotelCreateController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>HotelCreateController</servlet-name>
+        <url-pattern>/agent/hotel/create</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>VisitorDashboardController</servlet-name>
+        <servlet-class>tn.hotelmanagement.controller.VisitorDashboardController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>VisitorDashboardController</servlet-name>
+        <url-pattern>/visitor/dashboard</url-pattern>
+    </servlet-mapping>
+    <jsp-config>
+        <taglib>
+            <taglib-uri>http://jakarta.apache.org/jsp/jstl/core</taglib-uri>
+            <taglib-location>/WEB-INF/lib/jakarta.servlet.jsp.jstl-2.0.0.jar</taglib-location>
+        </taglib>
+    </jsp-config>
+
+</web-app>
